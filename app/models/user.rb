@@ -1,3 +1,4 @@
 class User < ApplicationRecord
-    has_many :activities
+    has_many :messages
+    has_many :activities, through: :messages
 end
