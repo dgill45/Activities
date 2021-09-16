@@ -27,8 +27,8 @@ class ActivitiesController < ApplicationController
     end
     
     # Destroy a activity: /activity/:id
-    def delete
-        activity = Activity.find(params[:id])
+    def destroy
+        activity = Activity.find_by(id: params[:id])
         activity.destroy
         head :no_content
     end
