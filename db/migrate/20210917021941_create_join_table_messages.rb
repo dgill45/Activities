@@ -7,6 +7,6 @@ class CreateJoinTableMessages < ActiveRecord::Migration[6.1]
       t.timestamp
       add_foreign_key :messages, :users
       add_foreign_key :messages, :activities
-
+    end
   end
 end
