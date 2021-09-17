@@ -3,8 +3,8 @@ class ActivitiesController < ApplicationController
 
     # Get all activities: /activities
     def index
-        activity = Activity.all
-        render json: activity 
+        activities = Activity.all
+        render json: activities 
     end
 
     # Get a specific activity: activities/:id
