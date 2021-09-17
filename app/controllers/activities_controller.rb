@@ -1,5 +1,7 @@
 class ActivitiesController < ApplicationController
     rescue_from ActiveRecord::RecordNotFound, with: :render_not_found_response
+    rescue_from ActiveRecord::RecordInvalid, with: :render_unprocessable_entity_response
+
 
     # Get all activities: /activities
     def index
@@ -41,5 +43,9 @@ class ActivitiesController < ApplicationController
     
     def render_not_found_response
         render json: { error: 'activity not found' }, status: :not_found
+    end
+
+    def render_unprocessable_entity_response(invalid)
+        render json: { errors: invalid.record.errors }, status: :unprocessable_entity
     end
 end
