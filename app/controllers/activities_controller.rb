@@ -6,13 +6,13 @@ class ActivitiesController < ApplicationController
     # Get all activities: /activities
     def index
         activities = Activity.all
-        render json: activities 
+        render json: activities, include: :messages 
     end
 
     # Get a specific activity: activities/:id
     def show 
         activity = Activity.find(params[:id])
-        render json: activity
+        render json: activity, include: :messages
     end
 
     # Post a new activity: /activities
