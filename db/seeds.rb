@@ -15,3 +15,7 @@ Activity.create!(name: "Volunteering", date: "Oct. 1, 2021", location: "Weequahi
 Activity.create!(name: "Rock Climbing", date: "Oct. 1, 2021", location: "Gravity Vault, Montclair, NJ")
 Activity.create!(name: "Concert", date: "Oct. 1, 2021", location: "Orchard Park, NY")
 Activity.create!(name: "Basketball", date: "Oct. 1, 2021", location: "Orange Park, East Orange, NJ")
+
+Message.create!(author: "Mike G", content: "Hey guys. Can't wait to go camping in Camp Flemington, Flemington, NJ")
+Message.create!(author: "Mike G", content: "Hey guys. Can't wait to go camping in Camp Flemington, Flemington, NJ")
+Message.create!(author: "Mike G", content: "Hey guys. Can't wait to go camping in Camp Flemington, Flemington, NJ")
